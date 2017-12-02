@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15A895A41FD3005900347281 /* UIColor+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A895A31FD3005900347281 /* UIColor+Tools.swift */; };
+		15A895A71FD300B900347281 /* RandomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A895A61FD300B900347281 /* RandomView.swift */; };
+		15A895B21FD306DB00347281 /* RandomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A895B11FD306DB00347281 /* RandomLabel.swift */; };
 		22C636A46F01D21E5A5CA47E /* Pods_Modular_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4AC6D5FABDCF30DA1F39CEF /* Pods_Modular_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -28,9 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11A8659ABD56F073AF7BEE86 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		11A8659ABD56F073AF7BEE86 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		15A895A31FD3005900347281 /* UIColor+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Tools.swift"; sourceTree = "<group>"; };
+		15A895A61FD300B900347281 /* RandomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomView.swift; sourceTree = "<group>"; };
+		15A895B11FD306DB00347281 /* RandomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomLabel.swift; sourceTree = "<group>"; };
 		1ED4A94F7150162D9ECEE794 /* Pods_Modular_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modular_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C096156963610330C7DE5B2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2C096156963610330C7DE5B2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3853D08A205361C46F653FC8 /* Pods-Modular_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modular_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Modular_Example/Pods-Modular_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		400376066C8441B608F5A97B /* Pods-Modular_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modular_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Modular_Tests/Pods-Modular_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Modular_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Modular_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +51,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		64FB3E1FD9F2A2F25D28B6DF /* Pods-Modular_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modular_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Modular_Example/Pods-Modular_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8BC5873D95CB9C6C96AEF9AE /* Pods-Modular_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modular_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Modular_Tests/Pods-Modular_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A7958C91E31EC185EA627D55 /* Modular.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Modular.podspec; path = ../Modular.podspec; sourceTree = "<group>"; };
+		A7958C91E31EC185EA627D55 /* Modular.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Modular.podspec; path = ../Modular.podspec; sourceTree = "<group>"; };
 		B4AC6D5FABDCF30DA1F39CEF /* Pods_Modular_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modular_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,6 +75,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15A895A21FD3004A00347281 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15A895A31FD3005900347281 /* UIColor+Tools.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		15A895A51FD300AC00347281 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15A895A61FD300B900347281 /* RandomView.swift */,
+				15A895B11FD306DB00347281 /* RandomLabel.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +116,8 @@
 		607FACD21AFB9204008FA782 /* Example for Modular */ = {
 			isa = PBXGroup;
 			children = (
+				15A895A51FD300AC00347281 /* Views */,
+				15A895A21FD3004A00347281 /* Extensions */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -310,10 +335,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Modular_Example/Pods-Modular_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Modular/Modular.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Modular.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -375,8 +402,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A895A41FD3005900347281 /* UIColor+Tools.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				15A895A71FD300B900347281 /* RandomView.swift in Sources */,
+				15A895B21FD306DB00347281 /* RandomLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
