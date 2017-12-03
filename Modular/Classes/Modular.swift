@@ -26,9 +26,9 @@ public class Modular {
     }
     
     public static var topMargin: CGFloat = 20
-    
     public static var leftMargin: CGFloat = 20
     public static var rightMargin: CGFloat = -20
+    public static var bottomMargin: CGFloat = -20
     
     public static var verticalSpacingMargin: CGFloat = 20
     public static var horizontalSpacingMargin: CGFloat = 20
@@ -43,7 +43,7 @@ public protocol PropertyProtocol {
     associatedtype PropertyParentType
     var place: Place<PropertyParentType> { get }
     var make: Make<PropertyParentType> { get }
-    var debug: Debug { get }
+    var debug: Debug<PropertyParentType> { get }
 
 }
 
@@ -61,7 +61,7 @@ extension PropertyProtocol {
         }
     }
     
-    public var debug: Debug {
+    public var debug: Debug<Self> {
         get {
             return Debug(self)
         }

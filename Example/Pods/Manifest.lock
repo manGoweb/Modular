@@ -9,18 +9,18 @@ DEPENDENCIES:
   - Modular (from `../`)
   - Nimble (~> 7.0.2)
   - Quick (~> 1.2.0)
-  - SnapKit
+  - SnapKit (~> 4.0.0)
 
 EXTERNAL SOURCES:
   Modular:
     :path: ../
 
 SPEC CHECKSUMS:
-  Modular: 6d54cbffec90c2515d747152a26a07933afd3ab7
+  Modular: b2dd78ae50e11c569c207a5c6c74163c64e1529f
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 105c8416670e5cbe5dfcafc70867a751b76c2b73
+PODFILE CHECKSUM: 8f9a2275c8dd4c0d92e6711ccf3ab5a02a22e3fe
 
 COCOAPODS: 1.4.0.beta.2

@@ -20,12 +20,25 @@ public struct Make<T> {
         return self
     }
     
+    public var and: Make<T> {
+        return self
+    }
+    
     public var make: Make<T> {
         return self
     }
     
     public var add: Make<T> {
         return self
+    }
+    
+}
+
+
+extension Make where T: ViewAlias {
+    
+    public var view: ViewAlias {
+        return element
     }
     
 }

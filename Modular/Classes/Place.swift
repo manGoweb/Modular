@@ -21,3 +21,12 @@ public struct Place<T> {
     }
     
 }
+
+
+extension Place where T: ViewAlias {
+    
+    public var view: ViewAlias {
+        return element
+    }
+    
+}

@@ -17,9 +17,9 @@
   },
   "social_media_url": "https://twitter.com/rafiki270",
   "platforms": {
-    "ios": "8.0",
-    "osx": "10.11",
-    "tvos": "9.0"
+    "ios": "9.2",
+    "osx": "10.12",
+    "tvos": "9.2"
   },
   "source_files": "Modular/Classes/**/*",
   "dependencies": {

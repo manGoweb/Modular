@@ -1,9 +1,10 @@
-platform :ios, '8.0'
 use_frameworks!
 
-target 'Modular_Example' do
+target 'Modular_iOS' do
+    platform :ios, '9.3'
+
     pod 'Modular', :path => '../'
-    pod 'SnapKit'
+    pod 'SnapKit', '~> 4.0.0'
     
     target 'Modular_Tests' do
         inherit! :search_paths
@@ -11,4 +12,16 @@ target 'Modular_Example' do
         pod 'Quick', '~> 1.2.0'
         pod 'Nimble', '~> 7.0.2'
     end
+end
+
+target 'Modular_macOS' do
+    platform :osx, '10.12'
+    
+    pod 'Modular', :path => '../'
+end
+
+target 'Modular_tvOS' do
+    platform :tvos, '9.2'
+    
+    pod 'Modular', :path => '../'
 end

@@ -1,0 +1,6 @@
+framework module Modular {
+  umbrella header "Modular-macOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
