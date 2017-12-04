@@ -30,4 +30,27 @@ extension Make where T: ViewAlias {
         return self
     }
     
+    @discardableResult public func match(dimensions view: ViewAlias) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.width.height.equalTo(view)
+        }
+        return self
+    }
+    
+    @discardableResult public func match(width view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.width.equalTo(view).offset(offset)
+        }
+        return self
+    }
+    
+    @discardableResult public func match(height view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.height.equalTo(view).offset(offset)
+        }
+        return self
+    }
+    
+    
+    
 }

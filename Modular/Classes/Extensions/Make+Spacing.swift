@@ -30,6 +30,69 @@ extension Make where T: ViewAlias {
         return self
     }
     
+    @discardableResult public func match(horizontal view: ViewAlias) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.left.right.equalTo(view)
+        }
+        return self
+    }
+    
+    @discardableResult public func match(left view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.left.equalTo(view).offset(offset)
+        }
+        return self
+    }
+    
+    @discardableResult public func match(right view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.right.equalTo(view).offset(offset)
+        }
+        return self
+    }
+    
+    @discardableResult public func match(vertical view: ViewAlias) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.top.bottom.equalTo(view)
+        }
+        return self
+    }
+    
+    @discardableResult public func match(top view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.top.equalTo(view).offset(offset)
+        }
+        return self
+    }
+    
+    @discardableResult public func match(bottom view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.bottom.equalTo(view).offset(offset)
+        }
+        return self
+    }
+    
+    @discardableResult public func match(center view: ViewAlias) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.center.equalTo(view)
+        }
+        return self
+    }
+    
+    @discardableResult public func match(centerX view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view).offset(offset)
+        }
+        return self
+    }
+    
+    @discardableResult public func match(centerY view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.centerY.equalTo(view).offset(offset)
+        }
+        return self
+    }
+    
     @discardableResult public func sideMargins(left: CGFloat = Modular.leftMargin, right: CGFloat = Modular.rightMargin) -> Make<T> {
         element.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(left)

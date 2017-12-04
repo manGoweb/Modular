@@ -30,6 +30,14 @@ For Carthage do:
 github 'manGoweb/Modular'
 ```
 
+When using carhage, you might have an issue with downstream dependencies being out of sync. So, shall you see anything similar to this:
+```ruby
+Reason: Incompatible library version: Modular requires version 1.0.0 or later, but SnapKit provides version 0.0.0
+```
+Clear your carthage build folder (all the cache) and clear all of your derived data.
+
+This issue is ca
+
 ## Usage
 
 ```Swift
