@@ -1,14 +1,10 @@
 PODS:
   - Modular (0.0.1):
     - SnapKit
-  - Nimble (7.0.3)
-  - Quick (1.2.0)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - Modular (from `../`)
-  - Nimble (~> 7.0.2)
-  - Quick (~> 1.2.0)
   - SnapKit (~> 4.0.0)
 
 EXTERNAL SOURCES:
@@ -17,10 +13,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Modular: b2dd78ae50e11c569c207a5c6c74163c64e1529f
-  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 8f9a2275c8dd4c0d92e6711ccf3ab5a02a22e3fe
+PODFILE CHECKSUM: 98a1e4d5e429543f95c09ede90a50c89d5d8a033
 
 COCOAPODS: 1.4.0.beta.2

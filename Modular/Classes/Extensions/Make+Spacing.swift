@@ -73,4 +73,26 @@ extension Make where T: ViewAlias {
         return self
     }
     
+    @discardableResult public func center() -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
+        return self
+    }
+    
+    @discardableResult public func centerX(offset: CGFloat = 0) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview().offset(offset)
+        }
+        return self
+    }
+    
+    @discardableResult public func centerY(offset: CGFloat = 0) -> Make<T> {
+        element.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview().offset(offset)
+        }
+        return self
+    }
+    
+    
 }

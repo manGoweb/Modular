@@ -10,6 +10,7 @@ import Foundation
 
 public struct Debug<T> {
     
+    /// Debug type
     public enum DebugType {
         case simple
         case full
@@ -26,6 +27,24 @@ public struct Debug<T> {
 
 extension Debug where T: ViewAlias {
     
+    // MARK: Debug
+    
+    /**
+     Prints out info about set constraints on any view
+     
+     Example debug in .simple mode:
+         View memory address: 0x7f9da3813cf0
+         Current constraints:
+             - left
+             - height
+             - bottom
+             - right
+             - top
+             - Internally width relates to height
+     
+     - Parameters:
+     - debugType: (DebugType, optional) set .full value for full apple formatted constraints info, default is .simple
+     */
     public func constraints(debugType: DebugType = .simple) {
         guard let superview = element.superview else {
             Debug<T>.log("Impossible to debug, view has no superview")
@@ -75,7 +94,6 @@ extension Debug where T: ViewAlias {
             constraintInfo.insert(format(c))
         }
         
-        // TODO: Print out all registered constraints
         var message = """
 
 View memory address: \(address)

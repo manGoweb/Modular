@@ -10,21 +10,19 @@ import Foundation
 
 #if os(iOS) || os(tvOS)
     
-
-    public extension Array where Element: UIView {
+    extension Array where Element: ViewAlias {
         
-        var make: MakeViewArray {
-            return MakeViewArray(elements: self)
+        public var make: Make<[ViewAlias]> {
+            return Make<[ViewAlias]>(self)
         }
         
     }
-
-    public struct MakeViewArray {
-        
-        let elements: [ViewAlias]
+    
+    
+    extension Make where T == [ViewAlias] {
         
         public func horizontalStackView(distribution: UIStackViewDistribution = .equalSpacing, alignment: UIStackViewAlignment = .leading) -> UIStackView {
-            let stackView = UIStackView(arrangedSubviews: elements)
+            let stackView = UIStackView(arrangedSubviews: element)
             stackView.axis = .horizontal
             stackView.distribution = distribution
             stackView.alignment = alignment
@@ -32,7 +30,7 @@ import Foundation
         }
         
         public func verticalStackView(distribution: UIStackViewDistribution = .equalSpacing, alignment: UIStackViewAlignment = .leading) -> UIStackView {
-            let stackView = UIStackView(arrangedSubviews: elements)
+            let stackView = UIStackView(arrangedSubviews: element)
             stackView.axis = .vertical
             stackView.distribution = distribution
             stackView.alignment = alignment
@@ -40,6 +38,5 @@ import Foundation
         }
         
     }
-
 
 #endif
