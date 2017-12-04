@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
     #   * Finally, don't worry about the indent, CocoaPods strips it!
 
     s.description      = <<-DESC
-    TODO: Add long description of the pod here.
+Modular is a framework that should simplify your work with autolayout. As we all know, accessing and using constraints directly as Apple designed it can be extremely painful. That's why SnapKit developed their amazing framework. Now with Modular, you should be able to create your layouts with even less code while maintaining uniformity of your spacings (if needed) throughout your app. Modular is not designed to handle all possible layout options but we are sure it will save you a fair amount of coding if you decide to use it!
     DESC
 
     s.homepage         = 'https://github.com/manGoweb/Modular'

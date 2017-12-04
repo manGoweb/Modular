@@ -1,0 +1,11 @@
+machine:
+  xcode:
+    version: "9.0"
+dependencies:
+  pre:
+    - ./scripts/install.sh
+  cache_directories:
+    - Pods
+test:
+  override:
+    - ./scripts/build.sh

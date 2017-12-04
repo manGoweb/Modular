@@ -24,21 +24,37 @@ extension Place where T: ViewAlias {
         return Make(element)
     }
     
-    public func on(_ view: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, top: CGFloat = Modular.topMargin, bottom: CGFloat? = nil) -> Make<T> {
+    public func on(_ view: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, top: CGFloat? = nil, bottom: CGFloat? = nil) -> Make<T> {
         view.addSubview(element)
-        element.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(top)
-            set(width: width, height: height, on: make)
-            if bottom != nil {
-                make.bottom.equalToSuperview().offset(bottom!)
+        if width != nil || height != nil || top != nil || bottom != nil {
+            element.snp.makeConstraints { (make) in
+                if top != nil {
+                    make.top.equalToSuperview().offset(top!)
+                }
+                set(width: width, height: height, on: make)
+                if bottom != nil {
+                    make.bottom.equalToSuperview().offset(bottom!)
+                }
             }
+        }
+        return Make(element)
+    }
+    
+    public func above(_ view: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, bottom: CGFloat = Modular.verticalSpacingMargin) -> Make<T> {
+        guard let superview = view.superview else {
+            fatalError("Other view doesn't have a superview")
+        }
+        superview.addSubview(element)
+        element.snp.makeConstraints { (make) in
+            make.bottom.equalTo(view.snp.top).offset(bottom)
+            set(width: width, height: height, on: make)
         }
         return Make(element)
     }
     
     public func below(_ view: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, top: CGFloat = Modular.verticalSpacingMargin) -> Make<T> {
         guard let superview = view.superview else {
-            fatalError("View doesn't have a superview")
+            fatalError("Other view doesn't have a superview")
         }
         superview.addSubview(element)
         element.snp.makeConstraints { (make) in
@@ -65,7 +81,7 @@ extension Place where T: ViewAlias {
     
     public func next(to view: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, left: CGFloat = Modular.horizontalSpacingMargin) -> Make<T> {
         guard let superview = view.superview else {
-            fatalError("View doesn't have a superview")
+            fatalError("Other view doesn't have a superview")
         }
         superview.addSubview(element)
         element.snp.makeConstraints { (make) in
@@ -78,7 +94,7 @@ extension Place where T: ViewAlias {
     
     public func before(_ view: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, right: CGFloat = Modular.horizontalSpacingMargin) -> Make<T> {
         guard let superview = view.superview else {
-            fatalError("View doesn't have a superview")
+            fatalError("Other view doesn't have a superview")
         }
         superview.addSubview(element)
         element.snp.makeConstraints { (make) in
@@ -91,7 +107,7 @@ extension Place where T: ViewAlias {
     
     @discardableResult public func between(_ view1: ViewAlias, and view2: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, top: CGFloat = 0, left: CGFloat = Modular.horizontalSpacingMargin, right: CGFloat = -Modular.horizontalSpacingMargin) -> Make<T> {
         guard let superview = view1.superview, let _ = view2.superview else {
-            fatalError("One of the views doesn't have a superview")
+            fatalError("One of the other views doesn't have a superview")
         }
         superview.addSubview(element)
         element.snp.makeConstraints { (make) in
