@@ -119,10 +119,38 @@ extension Place where T: ViewAlias {
         return Make(element)
     }
     
-    public func on(bottom view: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, bottom: CGFloat = 0) -> Make<T> {
+    public func onBottom(of view: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, bottom: CGFloat = 0) -> Make<T> {
         view.addSubview(element)
         element.snp.makeConstraints { (make) in
             make.bottom.equalToSuperview().offset(bottom)
+            set(width: width, height: height, on: make)
+        }
+        return Make(element)
+    }
+    
+    public func onTopLeft(of view: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, top: CGFloat? = nil, left: CGFloat? = nil) -> Make<T> {
+        view.addSubview(element)
+        element.snp.makeConstraints { (make) in
+            if top != nil {
+                make.top.equalToSuperview().offset(top!)
+            }
+            if left != nil {
+                make.left.equalToSuperview().offset(left!)
+            }
+            set(width: width, height: height, on: make)
+        }
+        return Make(element)
+    }
+    
+    public func onTopRight(of view: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, top: CGFloat? = nil, right: CGFloat? = nil) -> Make<T> {
+        view.addSubview(element)
+        element.snp.makeConstraints { (make) in
+            if top != nil {
+                make.top.equalToSuperview().offset(top!)
+            }
+            if right != nil {
+                make.right.equalToSuperview().offset(right!)
+            }
             set(width: width, height: height, on: make)
         }
         return Make(element)

@@ -30,7 +30,7 @@ extension Make where T: ViewAlias {
         return self
     }
     
-    @discardableResult public func match(horizontal view: ViewAlias) -> Make<T> {
+    @discardableResult public func match(horizontalPosition view: ViewAlias) -> Make<T> {
         element.snp.makeConstraints { (make) in
             make.left.right.equalTo(view)
         }
@@ -51,7 +51,7 @@ extension Make where T: ViewAlias {
         return self
     }
     
-    @discardableResult public func match(vertical view: ViewAlias) -> Make<T> {
+    @discardableResult public func match(verticalPosition view: ViewAlias) -> Make<T> {
         element.snp.makeConstraints { (make) in
             make.top.bottom.equalTo(view)
         }
