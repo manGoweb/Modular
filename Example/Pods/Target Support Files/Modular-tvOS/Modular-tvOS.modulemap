@@ -1,6 +1,0 @@
-framework module Modular {
-  umbrella header "Modular-tvOS-umbrella.h"
-
-  export *
-  module * { export * }
-}

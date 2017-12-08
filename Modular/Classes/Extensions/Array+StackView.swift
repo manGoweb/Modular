@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(iOS) || os(tvOS)
+    import UIKit
+#endif
 
 
 #if os(iOS) || os(tvOS)
@@ -38,5 +41,5 @@ import Foundation
         }
         
     }
-
+    
 #endif
