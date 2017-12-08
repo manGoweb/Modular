@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8460FC261FDA97230082694F"
-               BuildableName = "Modular_tvOS.framework"
+               BlueprintIdentifier = "844885341FDAB390009F5C08"
+               BuildableName = "Modular.framework"
                BlueprintName = "Modular-tvOS"
                ReferencedContainer = "container:Modular.xcodeproj">
             </BuildableReference>
@@ -47,8 +47,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8460FC261FDA97230082694F"
-            BuildableName = "Modular_tvOS.framework"
+            BlueprintIdentifier = "844885341FDAB390009F5C08"
+            BuildableName = "Modular.framework"
             BlueprintName = "Modular-tvOS"
             ReferencedContainer = "container:Modular.xcodeproj">
          </BuildableReference>
@@ -65,8 +65,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8460FC261FDA97230082694F"
-            BuildableName = "Modular_tvOS.framework"
+            BlueprintIdentifier = "844885341FDAB390009F5C08"
+            BuildableName = "Modular.framework"
             BlueprintName = "Modular-tvOS"
             ReferencedContainer = "container:Modular.xcodeproj">
          </BuildableReference>
