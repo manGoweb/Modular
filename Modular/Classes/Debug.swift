@@ -6,6 +6,11 @@
 //
 
 import Foundation
+#if os(iOS) || os(tvOS)
+    import UIKit
+#else
+    import Cocoa
+#endif
 
 
 public struct Debug<T> {
@@ -33,14 +38,14 @@ extension Debug where T: ViewAlias {
      Prints out info about set constraints on any view
      
      Example debug in .simple mode:
-         View memory address: 0x7f9da3813cf0
-         Current constraints:
-             - left
-             - height
-             - bottom
-             - right
-             - top
-             - Internally width relates to height
+     View memory address: 0x7f9da3813cf0
+     Current constraints:
+     - left
+     - height
+     - bottom
+     - right
+     - top
+     - Internally width relates to height
      
      - Parameters:
      - debugType: (DebugType, optional) set .full value for full apple formatted constraints info, default is .simple
@@ -95,10 +100,10 @@ extension Debug where T: ViewAlias {
         }
         
         var message = """
-
-View memory address: \(address)
-Current constraints:\n
-"""
+        
+        View memory address: \(address)
+        Current constraints:\n
+        """
         for info in constraintInfo {
             message.append("\t- \(info)\n")
         }

@@ -1,7 +1,10 @@
 #!/bin/bash
 
-echo "Install cocoapods"
+echo "Updating Brew"
+brew update
+brew upgrade
 
-sudo gem install cocoapods
-pod setup
-cd ./Example/ && pod install
+echo "Install Carthage"
+brew install carthage
+
+carthage update --cache-builds

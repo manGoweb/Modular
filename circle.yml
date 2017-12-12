@@ -5,7 +5,7 @@ dependencies:
   pre:
     - ./scripts/install.sh
   cache_directories:
-    - Pods
+    - Carthage
 test:
   override:
     - ./scripts/build.sh
