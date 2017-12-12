@@ -32,6 +32,8 @@ github 'manGoweb/Modular'
 
 ## Usage
 
+This is only a sample of what you can achieve with modular, please see the code for all methods available.
+
 ```Swift
 class ViewController: UIViewController {
 
