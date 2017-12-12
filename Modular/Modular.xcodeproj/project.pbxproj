@@ -56,6 +56,10 @@
 		844886BA1FDFF9D5009F5C08 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448853D1FDAB3DC009F5C08 /* SnapKit.framework */; };
 		844886BC1FDFF9E3009F5C08 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448853D1FDAB3DC009F5C08 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		844886BD1FDFF9EC009F5C08 /* Modular.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844885351FDAB390009F5C08 /* Modular.framework */; };
+		844886BF1FDFFAFE009F5C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844886BE1FDFFAFD009F5C08 /* ViewController.swift */; };
+		844886C01FDFFB23009F5C08 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844885561FDAB6B2009F5C08 /* SnapKit.framework */; };
+		844886C21FDFFB36009F5C08 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 844885561FDAB6B2009F5C08 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		844886C31FDFFB41009F5C08 /* Modular.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448854E1FDAB497009F5C08 /* Modular.framework */; };
 		8460FC1C1FDA967A0082694F /* Modular_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8460FC1A1FDA967A0082694F /* Modular_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8460FC441FDAAA690082694F /* NSLayoutConstraint+Modular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460FC3E1FDAAA680082694F /* NSLayoutConstraint+Modular.swift */; };
 		8460FC4A1FDAAA690082694F /* Place+Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460FC401FDAAA690082694F /* Place+Basic.swift */; };
@@ -87,6 +91,16 @@
 			dstSubfolderSpec = 10;
 			files = (
 				844886BC1FDFF9E3009F5C08 /* SnapKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844886C11FDFFB29009F5C08 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				844886C21FDFFB36009F5C08 /* SnapKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +137,7 @@
 		844886A51FDFF4EE009F5C08 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		844886AA1FDFF515009F5C08 /* RandomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomLabel.swift; sourceTree = "<group>"; };
 		844886AB1FDFF515009F5C08 /* RandomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomView.swift; sourceTree = "<group>"; };
+		844886BE1FDFFAFD009F5C08 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8460FC171FDA967A0082694F /* Modular.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Modular.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8460FC1A1FDA967A0082694F /* Modular_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Modular_iOS.h; sourceTree = "<group>"; };
 		8460FC1B1FDA967A0082694F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -177,6 +192,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844886C31FDFFB41009F5C08 /* Modular.framework in Frameworks */,
+				844886C01FDFFB23009F5C08 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				844886901FDFF456009F5C08 /* AppDelegate.swift */,
+				844886BE1FDFFAFD009F5C08 /* ViewController.swift */,
 				844886941FDFF456009F5C08 /* Assets.xcassets */,
 				844886961FDFF456009F5C08 /* Main.storyboard */,
 				844886991FDFF456009F5C08 /* Info.plist */,
@@ -459,6 +477,7 @@
 			buildConfigurationList = 8448869B1FDFF456009F5C08 /* Build configuration list for PBXNativeTarget "Modular-macOS-Example" */;
 			buildPhases = (
 				8448868A1FDFF456009F5C08 /* Sources */,
+				844886C11FDFFB29009F5C08 /* CopyFiles */,
 				8448868B1FDFF456009F5C08 /* Frameworks */,
 				8448868C1FDFF456009F5C08 /* Resources */,
 			);
@@ -664,6 +683,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844886BF1FDFFAFE009F5C08 /* ViewController.swift in Sources */,
 				844886911FDFF456009F5C08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -902,9 +922,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2H4X68RMW5;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/Mac";
 				INFOPLIST_FILE = "Modular-macOS-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.mangoweb.Modular-macOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -921,9 +942,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2H4X68RMW5;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/Mac";
 				INFOPLIST_FILE = "Modular-macOS-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.mangoweb.Modular-macOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
