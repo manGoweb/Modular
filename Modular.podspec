@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'Modular'
-    s.version          = '0.0.6'
+    s.version          = '0.0.8'
     s.summary          = 'More uniform layout with less code. Built on SnapKit.'
 
     # This description is used to generate tags and improve search results.
@@ -29,9 +29,9 @@ Modular is a framework that should simplify your work with autolayout. As we all
     s.social_media_url = 'https://twitter.com/rafiki270'
 
 
-    s.ios.deployment_target = '9.2'
+    s.ios.deployment_target = '10.0'
     s.osx.deployment_target = '10.12'
-    s.tvos.deployment_target = '9.2'
+    s.tvos.deployment_target = '10.0'
 
     s.source_files = 'Modular/Classes/**/*'
 
