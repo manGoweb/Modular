@@ -118,6 +118,7 @@ Current constraints:
 ## Author
 
 Ondrej Rafaj, developers@mangoweb.cz
+
 Vlad Radu, thevladpire@gmail.com
 
 ## License
