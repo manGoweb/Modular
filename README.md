@@ -9,7 +9,7 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run one of the example targets
 
 ## Requirements
 
@@ -88,6 +88,31 @@ class ViewController: UIViewController {
         stackView1.place.below(canvas2, height: 30).with.sideMargins()
     }
 
+}
+```
+
+To modify the default values set the following:
+```Swift
+public class Modular {
+    
+    /// Top margin, only used on spacing towards superview, when chaining multiple views below each other, verticalSpacingMargin will be used instead by default
+    public static var topMargin: CGFloat = 20
+    
+    /// Left margin, used for side spacing to superview, when chaining multiple views next to each other, horizontalSpacingMargin will be used instead by default
+    public static var leftMargin: CGFloat = 20
+    
+    /// Right margin, used for side spacing to superview, when chaining multiple views next to each other, horizontalSpacingMargin will be used instead by default
+    public static var rightMargin: CGFloat = -20
+    
+    /// Bottom margin, only used on spacing towards superview
+    public static var bottomMargin: CGFloat = -20
+    
+    /// Used to space items horizontaly (placing them next or before each other)
+    public static var horizontalSpacingMargin: CGFloat = 20
+    
+    /// Used to space items vertically (placing them below or above each other)
+    public static var verticalSpacingMargin: CGFloat = 20
+    
 }
 ```
 
