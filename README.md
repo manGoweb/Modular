@@ -1,6 +1,6 @@
 # Modular
 
-[![CircleCI](https://img.shields.io/circleci/project/github/manGoweb/Modular/master.svg?style=plastic)](https://circleci.com/gh/manGoweb/Modular)
+[![CircleCI](https://img.shields.io/circleci/project/github/manGoweb/Modular/master.svg?style=flat)](https://circleci.com/gh/manGoweb/Modular)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/Modular.svg?style=flat)](http://cocoapods.org/pods/Modular)
 [![License](https://img.shields.io/cocoapods/l/Modular.svg?style=flat)](http://cocoapods.org/pods/Modular)
