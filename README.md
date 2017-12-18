@@ -10,7 +10,7 @@
 
 ## Slack
 
-Get help using and installing this product on our [Slack](http://bit.ly/2B0dEyt), channel #modular
+Get help using and installing this product on our [Slack](http://bit.ly/2B0dEyt), channel <b>#help-modular</b>
 
 ## Example
 
