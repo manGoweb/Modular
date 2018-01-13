@@ -159,11 +159,11 @@ extension Place where T: ViewAlias {
     // MARK: Private helpers
     
     private func set(width: CGFloat?, height: CGFloat?, on make: SnapKit.ConstraintMaker) {
-        if height != nil {
-            make.height.equalTo(height!)
+        if let height = height {
+            make.height.equalTo(height)
         }
-        if width != nil {
-            make.height.equalTo(height!)
+        if let width = width {
+            make.width.equalTo(width)
         }
     }
     
