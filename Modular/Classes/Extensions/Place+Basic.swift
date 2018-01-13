@@ -85,7 +85,6 @@ extension Place where T: ViewAlias {
         }
         superview.addSubview(element)
         element.snp.makeConstraints { (make) in
-            make.top.equalTo(view.snp.top)
             make.left.equalTo(view.snp.right).offset(left)
             set(width: width, height: height, on: make)
         }
@@ -98,7 +97,6 @@ extension Place where T: ViewAlias {
         }
         superview.addSubview(element)
         element.snp.makeConstraints { (make) in
-            make.top.equalTo(view.snp.top)
             make.right.equalTo(view.snp.left).offset(right)
             set(width: width, height: height, on: make)
         }
@@ -111,7 +109,6 @@ extension Place where T: ViewAlias {
         }
         superview.addSubview(element)
         element.snp.makeConstraints { (make) in
-            make.top.equalTo(view1.snp.top).offset(top)
             make.left.equalTo(view1.snp.right).offset(left)
             make.right.equalTo(view2.snp.left).offset(right)
             set(width: width, height: height, on: make)
