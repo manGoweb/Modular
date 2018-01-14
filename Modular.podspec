@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'Modular'
-    s.version          = '0.0.8'
+    s.version          = '0.0.9'
     s.summary          = 'More uniform layout with less code. Built on SnapKit.'
 
     # This description is used to generate tags and improve search results.
