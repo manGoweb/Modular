@@ -40,12 +40,12 @@ extension Debug where T: ViewAlias {
      Example debug in .simple mode:
      View memory address: 0x7f9da3813cf0
      Current constraints:
-     - left
-     - height
-     - bottom
-     - right
-     - top
-     - Internally width relates to height
+         - left
+         - height
+         - bottom
+         - right
+         - top
+         - Internally width relates to height
      
      - Parameters:
      - debugType: (DebugType, optional) set .full value for full apple formatted constraints info, default is .simple

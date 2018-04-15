@@ -24,7 +24,7 @@ extension Place where T: ViewAlias {
         return Make(element)
     }
     
-    public func on(_ view: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, top: CGFloat? = nil, bottom: CGFloat? = nil) -> Make<T> {
+    public func on(_ view: ViewAlias, width: CGFloat? = nil, height: CGFloat? = nil, top: CGFloat? = 0, bottom: CGFloat? = nil) -> Make<T> {
         view.addSubview(element)
         if width != nil || height != nil || top != nil || bottom != nil {
             element.snp.makeConstraints { (make) in
