@@ -7,11 +7,11 @@
 
 import Foundation
 #if os(iOS) || os(tvOS)
-    import UIKit
+    @_exported import UIKit
 #elseif os(OSX)
-    import Cocoa
+    @_exported import Cocoa
 #endif
-import SnapKit
+@_exported import SnapKit
 
 
 extension Make where T: ViewAlias {

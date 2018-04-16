@@ -8,12 +8,12 @@
 import Foundation
 
 #if os(iOS) || os(tvOS)
-    import UIKit
+    @_exported import UIKit
     
     /// Alias for view available on current platform (iOS, tvOS)
     public typealias ViewAlias = UIView
 #elseif os(OSX)
-    import Cocoa
+    @_exported import Cocoa
     
     /// Alias for view available on current platform (macOS)
     public typealias ViewAlias = NSView

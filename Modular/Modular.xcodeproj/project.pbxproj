@@ -107,6 +107,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15EA55CD2084782F00A4C3B2 /* Modular.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = Modular.podspec; path = ../Modular.podspec; sourceTree = "<group>"; };
+		15EA55CE2084782F00A4C3B2 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
+		15EA55CF2084782F00A4C3B2 /* circle.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = circle.yml; path = ../circle.yml; sourceTree = "<group>"; };
+		15EA55D02084782F00A4C3B2 /* generate_docs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = generate_docs.sh; path = ../generate_docs.sh; sourceTree = "<group>"; };
+		15EA55D12084782F00A4C3B2 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; name = Cartfile.resolved; path = ../Cartfile.resolved; sourceTree = "<group>"; };
+		15EA55D22084782F00A4C3B2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		15EA55D32084782F00A4C3B2 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = scripts; path = ../scripts; sourceTree = "<group>"; };
+		15EA55D42084782F00A4C3B2 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8448852E1FDAB060009F5C08 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = ../Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		844885351FDAB390009F5C08 /* Modular.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Modular.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		844885371FDAB390009F5C08 /* Modular_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Modular_tvOS.h; sourceTree = "<group>"; };
@@ -208,6 +216,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15EA55CC2084780B00A4C3B2 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				15EA55CD2084782F00A4C3B2 /* Modular.podspec */,
+				15EA55D22084782F00A4C3B2 /* README.md */,
+				15EA55CE2084782F00A4C3B2 /* Cartfile */,
+				15EA55D12084782F00A4C3B2 /* Cartfile.resolved */,
+				15EA55CF2084782F00A4C3B2 /* circle.yml */,
+				15EA55D02084782F00A4C3B2 /* generate_docs.sh */,
+				15EA55D42084782F00A4C3B2 /* LICENSE */,
+				15EA55D32084782F00A4C3B2 /* scripts */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
 		844885361FDAB390009F5C08 /* Modular-tvOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +323,7 @@
 		8460FC0D1FDA967A0082694F = {
 			isa = PBXGroup;
 			children = (
+				15EA55CC2084780B00A4C3B2 /* Configuration */,
 				8460FC3C1FDA987E0082694F /* Classes */,
 				8460FC191FDA967A0082694F /* Modular-iOS */,
 				844885361FDAB390009F5C08 /* Modular-tvOS */,
