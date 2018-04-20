@@ -17,145 +17,255 @@ import Foundation
 extension Make where T: ViewAlias {
     
     @discardableResult public func sideToSide() -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview()
+            make.left.equalTo(viewAttributes.left)
+            make.right.equalTo(viewAttributes.right)
         }
         return self
     }
     
     @discardableResult public func topToBottom() -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.top.bottom.equalToSuperview()
+            make.top.equalTo(viewAttributes.top)
+            make.bottom.equalTo(viewAttributes.bottom)
         }
         return self
     }
     
     @discardableResult public func match(horizontalPosition view: ViewAlias) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.left.right.equalTo(view)
+            make.left.equalTo(viewAttributes.left)
+            make.right.equalTo(viewAttributes.right)
         }
         return self
     }
     
     @discardableResult public func match(left view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.left.equalTo(view).offset(offset)
+            make.left.equalTo(viewAttributes.left).offset(offset)
         }
         return self
     }
     
     @discardableResult public func match(right view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.right.equalTo(view).offset(offset)
+            make.right.equalTo(viewAttributes.right).offset(offset)
         }
         return self
     }
     
     @discardableResult public func match(verticalPosition view: ViewAlias) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.top.bottom.equalTo(view)
+            make.top.equalTo(viewAttributes.top)
+            make.bottom.equalTo(viewAttributes.bottom)
         }
         return self
     }
     
     @discardableResult public func match(top view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.top.equalTo(view).offset(offset)
+            make.top.equalTo(viewAttributes.top).offset(offset)
         }
         return self
     }
     
     @discardableResult public func match(bottom view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.bottom.equalTo(view).offset(offset)
+            make.bottom.equalTo(viewAttributes.bottom).offset(offset)
         }
         return self
     }
     
     @discardableResult public func match(center view: ViewAlias) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.center.equalTo(view)
+            make.center.equalTo(viewAttributes.center)
         }
         return self
     }
     
     @discardableResult public func match(centerX view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.centerX.equalTo(view).offset(offset)
+            make.centerX.equalTo(viewAttributes.centerX).offset(offset)
         }
         return self
     }
     
     @discardableResult public func match(centerY view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.centerY.equalTo(view).offset(offset)
+            make.centerY.equalTo(viewAttributes.centerY).offset(offset)
         }
         return self
     }
     
     @discardableResult public func sideMargins(left: CGFloat = Modular.leftMargin, right: CGFloat = Modular.rightMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(left)
-            make.right.equalToSuperview().offset(right)
+            make.left.equalTo(viewAttributes.left).offset(left)
+            make.right.equalTo(viewAttributes.right).offset(right)
         }
         return self
     }
     
     @discardableResult public func topMargin(_ top: CGFloat = Modular.topMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(top)
+            make.top.equalTo(viewAttributes.top).offset(top)
         }
         return self
     }
     
     @discardableResult public func leftMargin(_ left: CGFloat = Modular.leftMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(left)
+            make.left.equalTo(viewAttributes.left).offset(left)
         }
         return self
     }
     
     @discardableResult public func rightMargin(_ right: CGFloat = Modular.rightMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.right.equalToSuperview().offset(right)
+            make.right.equalTo(viewAttributes.right).offset(right)
         }
         return self
     }
     
     @discardableResult public func minBottomMargin(_ bottom: CGFloat = Modular.bottomMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.bottom.lessThanOrEqualTo(bottom)
+            make.bottom.lessThanOrEqualTo(viewAttributes.bottom).offset(bottom)
         }
         return self
     }
     
     @discardableResult public func bottomMargin(_ bottom: CGFloat = Modular.bottomMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(bottom)
+            make.bottom.equalTo(viewAttributes.bottom).offset(bottom)
         }
         return self
     }
     
     @discardableResult public func center() -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
+            make.center.equalTo(viewAttributes.center)
         }
         return self
     }
     
     @discardableResult public func centerX(offset: CGFloat = 0) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview().offset(offset)
+            make.centerX.equalTo(viewAttributes.centerX).offset(offset)
         }
         return self
     }
     
     @discardableResult public func centerY(offset: CGFloat = 0) -> Make<T> {
+        let viewAttributes = constraintAttributes()
         element.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview().offset(offset)
+            make.centerY.equalTo(viewAttributes.centerY).offset(offset)
         }
         return self
     }
     
     
+    // MARK: - Greater Than Equal To constraints
+    
+    @discardableResult public func topMarginGreaterThanEqualTo(view: ViewAlias? = nil, top: CGFloat = Modular.topMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes(for: view)
+        element.snp.makeConstraints { (make) in
+            make.top.greaterThanOrEqualTo(viewAttributes.top).offset(top)
+        }
+        return self
+    }
+    
+    @discardableResult public func leftMarginGreaterThanEqualTo(view: ViewAlias? = nil, left: CGFloat = Modular.leftMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes(for: view)
+        element.snp.makeConstraints { (make) in
+            make.left.greaterThanOrEqualTo(viewAttributes.left).offset(left)
+        }
+        return self
+    }
+    
+    @discardableResult public func rightMarginGreaterThanEqualTo(view: ViewAlias? = nil, right: CGFloat = Modular.rightMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes(for: view)
+        element.snp.makeConstraints { (make) in
+            make.right.greaterThanOrEqualTo(viewAttributes.right).offset(right)
+        }
+        return self
+    }
+    
+    @discardableResult public func bottomMarginGreaterThanEqualTo(view: ViewAlias? = nil, bottom: CGFloat = Modular.bottomMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes(for: view)
+        element.snp.makeConstraints { (make) in
+            make.bottom.greaterThanOrEqualTo(viewAttributes.bottom).offset(bottom)
+        }
+        return self
+    }
+    
+    // MARK: - Less Than Equal To constraints
+    
+    @discardableResult public func topMarginLessThanEqualTo(view: ViewAlias? = nil, top: CGFloat = Modular.topMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes(for: view)
+        element.snp.makeConstraints { (make) in
+            make.top.lessThanOrEqualTo(viewAttributes.top).offset(top)
+        }
+        return self
+    }
+    
+    
+    @discardableResult public func leftMarginLessThanEqualTo(view: ViewAlias? = nil, left: CGFloat = Modular.leftMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes(for: view)
+        element.snp.makeConstraints { (make) in
+            make.left.lessThanOrEqualTo(viewAttributes.left).offset(left)
+        }
+        return self
+    }
+    
+    @discardableResult public func rightMarginLessThanEqualTo(view: ViewAlias? = nil, right: CGFloat = Modular.rightMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes(for: view)
+        element.snp.makeConstraints { (make) in
+            make.right.lessThanOrEqualTo(viewAttributes.right).offset(right)
+        }
+        return self
+    }
+    
+    @discardableResult public func bottomMarginLessThanEqualTo(view: ViewAlias? = nil, bottom: CGFloat = Modular.bottomMargin) -> Make<T> {
+        let viewAttributes = constraintAttributes(for: view)
+        element.snp.makeConstraints { (make) in
+            make.bottom.lessThanOrEqualTo(viewAttributes.bottom).offset(bottom)
+        }
+        return self
+    }
+    
+    private func constraintAttributes(for view: ViewAlias? = nil) -> ConstraintBasicAttributesDSL {
+        guard let view = view ?? element.superview else {
+            fatalError("Expected superview but found nil when attempting make constraint")
+        }
+        
+        return useSafeArea ? view.safeArea : view.snp
+    }
+}
+
+extension ViewAlias {
+    var safeArea: ConstraintBasicAttributesDSL {
+        if #available(iOS 11.0, *) {
+            return self.safeAreaLayoutGuide.snp
+        } else {
+            return self.snp
+        }
+    }
 }
