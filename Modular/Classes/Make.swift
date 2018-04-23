@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 /**
  Additional layout helpers
  
@@ -16,9 +15,11 @@ import Foundation
 public struct Make<T> {
     
     let element: T
+    let useSafeArea: Bool
     
-    init(_ obj: T) {
+    init(_ obj: T, useSafeArea: Bool = false) {
         element = obj
+        self.useSafeArea = useSafeArea
     }
     
     /// Syntactic sugar used in chaining make methods together
@@ -40,9 +41,7 @@ public struct Make<T> {
     public var add: Make<T> {
         return self
     }
-    
 }
-
 
 extension Make where T: ViewAlias {
     
@@ -51,4 +50,7 @@ extension Make where T: ViewAlias {
         return element
     }
     
+    public var safeArea: Make<T> {
+        return Make(element, useSafeArea: true)
+    }
 }
