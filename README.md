@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         canvas1.place.on(andFill: view)
 
         let view1 = RandomView()
-        view1.place.on(canvas1, height: 20).with.topMargin().and.sideToSide()
+        view1.place.on(canvas1, height: 20, bottom: -10).with.topMargin().and.sideToSide()
 
         let label1 = RandomLabel()
         label1.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nUt eu viverra orci. Morbi nulla diam, ornare sit amet bibendum aliquet, lacinia et purus. Ut lacinia bibendum dapibus."
@@ -96,29 +96,36 @@ class ViewController: UIViewController {
 }
 ```
 
-To modify the default values set the following:
+To modify the default values set the following (You will still be able to set custom margings directly where applicable if needed):
 ```Swift
-public class Modular {
-    
+public class DefaultValues {
+
     /// Top margin, only used on spacing towards superview, when chaining multiple views below each other, verticalSpacingMargin will be used instead by default
     public static var topMargin: CGFloat = 20
-    
-    /// Left margin, used for side spacing to superview, when chaining multiple views next to each other, horizontalSpacingMargin will be used instead by default
+
+    /// Left inset, used for side spacing to superview, when chaining multiple views next to each other, horizontalSpacingMargin will be used instead by default
     public static var leftMargin: CGFloat = 20
-    
+
+    /// Leading margin, used for side spacing to superview, when chaining multiple views next to each other, horizontalSpacingMargin will be used instead by default
+    public static var leadingInset: CGFloat = 20
+
     /// Right margin, used for side spacing to superview, when chaining multiple views next to each other, horizontalSpacingMargin will be used instead by default
     public static var rightMargin: CGFloat = -20
-    
+
+    /// Trailing inset, used for side spacing to superview, when chaining multiple views next to each other, horizontalSpacingMargin will be used instead by default
+    public static var trailingInset: CGFloat = 20
+
     /// Bottom margin, only used on spacing towards superview
     public static var bottomMargin: CGFloat = -20
-    
+
     /// Used to space items horizontaly (placing them next or before each other)
     public static var horizontalSpacingMargin: CGFloat = 20
-    
+
     /// Used to space items vertically (placing them below or above each other)
     public static var verticalSpacingMargin: CGFloat = 20
-    
+
 }
+
 ```
 
 ## Debugging views & constraints

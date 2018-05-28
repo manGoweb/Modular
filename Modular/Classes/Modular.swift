@@ -20,21 +20,31 @@ import Foundation
 #endif
 
 
+@available(*, unavailable, message: "This class has been renamed", renamed: "DefaultValues")
+public class Modular { }
+
+
 /**
  Base configuration class used to set default margins throughout the project.
  
- You will still be able to set custom margings directly where applicable if needed
+ - important: You will still be able to set custom margings directly where applicable if needed
  */
-public class Modular {
+public class DefaultValues {
     
     /// Top margin, only used on spacing towards superview, when chaining multiple views below each other, verticalSpacingMargin will be used instead by default
     public static var topMargin: CGFloat = 20
     
-    /// Left margin, used for side spacing to superview, when chaining multiple views next to each other, horizontalSpacingMargin will be used instead by default
+    /// Left inset, used for side spacing to superview, when chaining multiple views next to each other, horizontalSpacingMargin will be used instead by default
     public static var leftMargin: CGFloat = 20
+    
+    /// Leading margin, used for side spacing to superview, when chaining multiple views next to each other, horizontalSpacingMargin will be used instead by default
+    public static var leadingInset: CGFloat = 20
     
     /// Right margin, used for side spacing to superview, when chaining multiple views next to each other, horizontalSpacingMargin will be used instead by default
     public static var rightMargin: CGFloat = -20
+    
+    /// Trailing inset, used for side spacing to superview, when chaining multiple views next to each other, horizontalSpacingMargin will be used instead by default
+    public static var trailingInset: CGFloat = 20
     
     /// Bottom margin, only used on spacing towards superview
     public static var bottomMargin: CGFloat = -20
@@ -53,8 +63,14 @@ public class Modular {
 public protocol PropertyProtocol {
     
     associatedtype PropertyParentType
+    
+    /// Place a view on stage
     var place: Place<PropertyParentType> { get }
+    
+    /// Additional layout helpers
     var make: Make<PropertyParentType> { get }
+    
+    /// Easy debugging of view constraints
     var debug: Debug<PropertyParentType> { get }
 
 }
@@ -77,7 +93,7 @@ extension PropertyProtocol {
         }
     }
     
-    /// Debug your views constraints easy
+    /// Easy debugging of view constraints
     public var debug: Debug<Self> {
         get {
             return Debug(self)

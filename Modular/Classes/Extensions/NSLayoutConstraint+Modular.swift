@@ -15,18 +15,22 @@ import Foundation
 
 extension NSLayoutConstraint {
     
+    /// First view
     var firstView: ViewAlias? {
         return firstItem as? ViewAlias
     }
     
+    /// Second view
     var secondView: ViewAlias? {
         return secondItem as? ViewAlias
     }
     
+    /// Compare first and second view
     var firstAndSecondIsSame: Bool {
         return firstView == secondView
     }
     
+    /// Compare first and second view to a third one
     func firstAndSecondEqual(to view: ViewAlias) -> Bool {
         return firstAndSecondIsSame && (secondView == view)
     }
@@ -37,7 +41,8 @@ extension NSLayoutConstraint {
     
     extension NSLayoutAttribute {
         
-        var asString: String {
+        /// Convert attribute to a string
+        public var asString: String {
             switch self {
             case .left:
                 return "left"
@@ -89,7 +94,8 @@ extension NSLayoutConstraint {
     
     extension NSLayoutConstraint.Attribute {
         
-        var asString: String {
+        /// Convert attribute to a string
+        public var asString: String {
             switch self {
             case .left:
                 return "left"

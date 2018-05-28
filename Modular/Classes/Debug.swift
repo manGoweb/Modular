@@ -13,6 +13,7 @@ import Foundation
 #endif
 
 
+/// Constraint debugging access object
 public struct Debug<T> {
     
     /// Debug type
@@ -48,7 +49,7 @@ extension Debug where T: ViewAlias {
          - Internally width relates to height
      
      - Parameters:
-     - debugType: (DebugType, optional) set .full value for full apple formatted constraints info, default is .simple
+        - debugType: (DebugType, optional) set .full value for full apple formatted constraints info, default is .simple
      */
     public func constraints(debugType: DebugType = .simple) {
         guard let superview = element.superview else {

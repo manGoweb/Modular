@@ -15,6 +15,7 @@ import Foundation
     
     extension Array where Element: ViewAlias {
         
+        /// Modular make property
         public var make: Make<[ViewAlias]> {
             return Make<[ViewAlias]>(self)
         }
@@ -24,6 +25,14 @@ import Foundation
     
     extension Make where T == [ViewAlias] {
         
+        /**
+         Create horizontal stack view from an array of views
+         
+         - parameters:
+            - distribution: `UIStackViewDistribution` (default `.equalSpacing`)
+            - alignment: `UIStackViewAlignment` (default `.leading`)
+         - returns: `UIStackView`
+         */
         public func horizontalStackView(distribution: UIStackViewDistribution = .equalSpacing, alignment: UIStackViewAlignment = .leading) -> UIStackView {
             let stackView = UIStackView(arrangedSubviews: element)
             stackView.axis = .horizontal
@@ -32,6 +41,14 @@ import Foundation
             return stackView
         }
         
+        /**
+         Create vertical stack view from an array of views
+         
+         - parameters:
+            - distribution: `UIStackViewDistribution` (default `.equalSpacing`)
+            - alignment: `UIStackViewAlignment` (default `.leading`)
+         - returns: `UIStackView`
+         */
         public func verticalStackView(distribution: UIStackViewDistribution = .equalSpacing, alignment: UIStackViewAlignment = .leading) -> UIStackView {
             let stackView = UIStackView(arrangedSubviews: element)
             stackView.axis = .vertical
