@@ -16,6 +16,13 @@ import Foundation
 
 extension Make where T: ViewAlias {
     
+    /**
+     Set width of a view
+     
+     - parameters:
+        - width: Width of the view
+     - returns: `Make` instance to allow further modifications
+     */
     @discardableResult public func width(_ width: CGFloat) -> Make<T> {
         element.snp.makeConstraints { (make) in
             make.width.equalTo(width)
@@ -23,6 +30,13 @@ extension Make where T: ViewAlias {
         return self
     }
     
+    /**
+     Set height of a view
+     
+     - parameters:
+        - width: Height of the view
+     - returns: `Make` instance to allow further modifications
+     */
     @discardableResult public func height(_ height: CGFloat) -> Make<T> {
         element.snp.makeConstraints { (make) in
             make.height.equalTo(height)
@@ -30,6 +44,13 @@ extension Make where T: ViewAlias {
         return self
     }
     
+    /**
+     Match width and height of another view
+     
+     - parameters:
+        - view: View to be matched
+     - returns: `Make` instance to allow further modifications
+     */
     @discardableResult public func match(dimensions view: ViewAlias) -> Make<T> {
         element.snp.makeConstraints { (make) in
             make.width.height.equalTo(view)
@@ -37,6 +58,14 @@ extension Make where T: ViewAlias {
         return self
     }
     
+    /**
+     Match width of another view
+     
+     - parameters:
+        - view: View to be matched
+        - offset: Offset (default 0)
+     - returns: `Make` instance to allow further modifications
+     */
     @discardableResult public func match(width view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
         element.snp.makeConstraints { (make) in
             make.width.equalTo(view).offset(offset)
@@ -44,6 +73,14 @@ extension Make where T: ViewAlias {
         return self
     }
     
+    /**
+     Match height of another view
+     
+     - parameters:
+        - view: View to be matched
+        - offset: Offset (default 0)
+     - returns: `Make` instance to allow further modifications
+     */
     @discardableResult public func match(height view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
         element.snp.makeConstraints { (make) in
             make.height.equalTo(view).offset(offset)

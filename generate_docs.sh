@@ -19,12 +19,11 @@ fi
 
 printf "👾	Generating documentation\n"
 
-jazzy \
+cd ./Modular && jazzy \
     --clean \
-    --author Realm \
-    --author_url https://realm.io \
-    --github_url https://github.com/realm/realm-cocoa \
-    --github-file-prefix https://github.com/realm/realm-cocoa/tree/v0.96.2 \
+    --author Ondrej Rafaj \
+    --author_url https://github.com/LiveUI \
+    --github_url https://github.com/LiveUI/Modular \
     --xcodebuild-arguments -scheme,Modular-iOS \
     --module Modular-iOS
 

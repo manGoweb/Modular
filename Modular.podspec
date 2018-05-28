@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'Modular'
-    s.version          = '0.0.10'
+    s.version          = '1.0.0'
     s.summary          = 'More uniform layout with less code. Built on SnapKit.'
 
     # This description is used to generate tags and improve search results.
@@ -24,13 +24,13 @@ Modular is a framework that should simplify your work with autolayout. As we all
     s.homepage         = 'https://github.com/manGoweb/Modular'
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
-    s.author           = { 'Ondrej Rafaj' => 'developers@mangoweb.cz' }
+    s.author           = { 'Ondrej Rafaj' => 'dev@liveui.io' }
     s.source           = { :git => 'https://github.com/manGoweb/Modular.git', :tag => s.version.to_s }
     s.social_media_url = 'https://twitter.com/rafiki270'
 
 
     s.ios.deployment_target = '10.0'
-    s.osx.deployment_target = '10.12'
+    #s.osx.deployment_target = '10.12'
     s.tvos.deployment_target = '10.0'
 
     s.source_files = 'Modular/Classes/**/*'
