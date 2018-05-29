@@ -1,4 +1,7 @@
-# Modular
+![Modular:Beautiful building blocks in Swift](https://github.com/LiveUI/Modular/raw/master/Other/logo.png)
+
+##
+
 
 [![Slack](https://img.shields.io/badge/join-slack-745EAF.svg?style=flat)](http://bit.ly/2B0dEyt)
 [![CircleCI](https://img.shields.io/circleci/project/github/manGoweb/Modular/master.svg?style=flat)](https://circleci.com/gh/manGoweb/Modular)
