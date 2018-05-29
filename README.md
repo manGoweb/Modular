@@ -1,4 +1,4 @@
-![Modular:Beautiful building blocks in Swift](https://github.com/LiveUI/Modular/raw/master/Other/logo.png)
+![Modular:Beautiful building blocks in Swift](https://github.com/manGoweb/Modular/raw/master/Other/logo.png)
 
 ##
 
