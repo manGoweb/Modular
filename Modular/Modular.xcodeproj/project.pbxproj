@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1561D7BF20C4862C00BCA532 /* Make+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1561D7BE20C4862C00BCA532 /* Make+Custom.swift */; };
+		1561D7C020C4862C00BCA532 /* Make+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1561D7BE20C4862C00BCA532 /* Make+Custom.swift */; };
+		1561D7C120C4862C00BCA532 /* Make+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1561D7BE20C4862C00BCA532 /* Make+Custom.swift */; };
 		15AD2A1020BCAE0E00E3A180 /* ConstraintMaker+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD2A0F20BCAE0E00E3A180 /* ConstraintMaker+Helpers.swift */; };
 		15AD2A1120BCAE0E00E3A180 /* ConstraintMaker+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD2A0F20BCAE0E00E3A180 /* ConstraintMaker+Helpers.swift */; };
 		15AD2A1220BCAE0E00E3A180 /* ConstraintMaker+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AD2A0F20BCAE0E00E3A180 /* ConstraintMaker+Helpers.swift */; };
@@ -110,6 +113,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1561D7BE20C4862C00BCA532 /* Make+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Make+Custom.swift"; sourceTree = "<group>"; };
 		15AD2A0F20BCAE0E00E3A180 /* ConstraintMaker+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConstraintMaker+Helpers.swift"; sourceTree = "<group>"; };
 		15EA55CD2084782F00A4C3B2 /* Modular.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = Modular.podspec; path = ../Modular.podspec; sourceTree = "<group>"; };
 		15EA55CE2084782F00A4C3B2 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
@@ -385,6 +389,7 @@
 				8460FC3E1FDAAA680082694F /* NSLayoutConstraint+Modular.swift */,
 				8460FC401FDAAA690082694F /* Place+Basic.swift */,
 				15AD2A0F20BCAE0E00E3A180 /* ConstraintMaker+Helpers.swift */,
+				1561D7BE20C4862C00BCA532 /* Make+Custom.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -658,6 +663,7 @@
 				844885431FDAB456009F5C08 /* Array+StackView.swift in Sources */,
 				844885471FDAB456009F5C08 /* NSLayoutConstraint+Modular.swift in Sources */,
 				844885411FDAB451009F5C08 /* Modular.swift in Sources */,
+				1561D7C020C4862C00BCA532 /* Make+Custom.swift in Sources */,
 				844885451FDAB456009F5C08 /* Make+Shapes.swift in Sources */,
 				844885461FDAB456009F5C08 /* Make+Spacing.swift in Sources */,
 				8448853F1FDAB451009F5C08 /* Debug.swift in Sources */,
@@ -676,6 +682,7 @@
 				8448855C1FDAB6C9009F5C08 /* Array+StackView.swift in Sources */,
 				844885601FDAB6C9009F5C08 /* NSLayoutConstraint+Modular.swift in Sources */,
 				8448855A1FDAB6C4009F5C08 /* Modular.swift in Sources */,
+				1561D7C120C4862C00BCA532 /* Make+Custom.swift in Sources */,
 				8448855E1FDAB6C9009F5C08 /* Make+Shapes.swift in Sources */,
 				8448855F1FDAB6C9009F5C08 /* Make+Spacing.swift in Sources */,
 				844885581FDAB6C4009F5C08 /* Debug.swift in Sources */,
@@ -727,6 +734,7 @@
 				8460FC4A1FDAAA690082694F /* Place+Basic.swift in Sources */,
 				8460FC5D1FDAAA7E0082694F /* Make.swift in Sources */,
 				8460FC531FDAAA690082694F /* Array+StackView.swift in Sources */,
+				1561D7BF20C4862C00BCA532 /* Make+Custom.swift in Sources */,
 				8460FC501FDAAA690082694F /* Make+Dimensions.swift in Sources */,
 				8460FC601FDAAA7E0082694F /* Modular.swift in Sources */,
 				8460FC5A1FDAAA7E0082694F /* Debug.swift in Sources */,
