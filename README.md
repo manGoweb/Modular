@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         canvas1.place.on(andFill: view)
 
         let view1 = RandomView()
-        view1.place.on(canvas1, height: 20, bottom: -10).with.topMargin().and.sideToSide()
+        view1.place.on(canvas1, height: 20, bottom: -10).with.top().and.sideToSide()
 
         let label1 = RandomLabel()
         label1.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nUt eu viverra orci. Morbi nulla diam, ornare sit amet bibendum aliquet, lacinia et purus. Ut lacinia bibendum dapibus."
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
 
         // Make a square view and place it to the left
         let view2 = RandomView()
-        view2.place.below(label1).make.square(side: 40).add.leftMargin()
+        view2.place.below(label1).make.square(side: 40).add.left()
 
         // Make a circle and place it next to the previous view
         let circle1 = RandomView()
@@ -76,10 +76,10 @@ class ViewController: UIViewController {
         canvas2.place.below(view3).sideMargins()
 
         let leftView1 = RandomView()
-        leftView1.place.on(canvas2).add.topMargin().make.rectangle(width: 30, height: 30).with.leftMargin().and.minBottomMargin()
+        leftView1.place.on(canvas2).add.top().make.rectangle(width: 30, height: 30).with.left().and.minBottomMargin()
 
         let rightView1 = RandomView()
-        rightView1.place.on(canvas2).add.topMargin().make.rectangle(width: 30, height: 10).with.rightMargin().minBottomMargin()
+        rightView1.place.on(canvas2).add.top().make.rectangle(width: 30, height: 10).with.right().minBottomMargin()
 
         let middleView1 = RandomView()
         middleView1.place.between(leftView1, and: rightView1, height: 50).with.minBottomMargin()
