@@ -52,7 +52,7 @@ extension Make where T: ViewAlias {
      - returns: `Make` instance to allow further modifications
      */
     @discardableResult public func match(horizontally view: ViewAlias) -> Make<T> {
-        let viewAttributes = constraintAttributes()
+        let viewAttributes = constraintAttributes(for: view)
         element.snp.makeConstraints { (make) in
             make.left.equalTo(viewAttributes.left)
             make.right.equalTo(viewAttributes.right)
@@ -68,7 +68,7 @@ extension Make where T: ViewAlias {
      - returns: `Make` instance to allow further modifications
      */
     @discardableResult public func match(vertically view: ViewAlias) -> Make<T> {
-        let viewAttributes = constraintAttributes()
+        let viewAttributes = constraintAttributes(for: view)
         element.snp.makeConstraints { (make) in
             make.top.equalTo(viewAttributes.top)
             make.bottom.equalTo(viewAttributes.bottom)
@@ -85,7 +85,7 @@ extension Make where T: ViewAlias {
      - returns: `Make` instance to allow further modifications
      */
     @discardableResult public func match(top view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
-        let viewAttributes = constraintAttributes()
+        let viewAttributes = constraintAttributes(for: view)
         element.snp.makeConstraints { (make) in
             make.top.equalTo(viewAttributes.top).offset(offset)
         }
@@ -101,7 +101,7 @@ extension Make where T: ViewAlias {
      - returns: `Make` instance to allow further modifications
      */
     @discardableResult public func match(left view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
-        let viewAttributes = constraintAttributes()
+        let viewAttributes = constraintAttributes(for: view)
         element.snp.makeConstraints { (make) in
             make.left.equalTo(viewAttributes.left).offset(offset)
         }
@@ -117,7 +117,7 @@ extension Make where T: ViewAlias {
      - returns: `Make` instance to allow further modifications
      */
     @discardableResult public func match(right view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
-        let viewAttributes = constraintAttributes()
+        let viewAttributes = constraintAttributes(for: view)
         element.snp.makeConstraints { (make) in
             make.right.equalTo(viewAttributes.right).offset(offset)
         }
@@ -133,7 +133,7 @@ extension Make where T: ViewAlias {
      - returns: `Make` instance to allow further modifications
      */
     @discardableResult public func match(bottom view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
-        let viewAttributes = constraintAttributes()
+        let viewAttributes = constraintAttributes(for: view)
         element.snp.makeConstraints { (make) in
             make.bottom.equalTo(viewAttributes.bottom).offset(offset)
         }
@@ -148,7 +148,7 @@ extension Make where T: ViewAlias {
      - returns: `Make` instance to allow further modifications
      */
     @discardableResult public func match(center view: ViewAlias) -> Make<T> {
-        let viewAttributes = constraintAttributes()
+        let viewAttributes = constraintAttributes(for: view)
         element.snp.makeConstraints { (make) in
             make.center.equalTo(viewAttributes.center)
         }
@@ -164,7 +164,7 @@ extension Make where T: ViewAlias {
      - returns: `Make` instance to allow further modifications
      */
     @discardableResult public func match(centerX view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
-        let viewAttributes = constraintAttributes()
+        let viewAttributes = constraintAttributes(for: view)
         element.snp.makeConstraints { (make) in
             make.centerX.equalTo(viewAttributes.centerX).offset(offset)
         }
@@ -180,7 +180,7 @@ extension Make where T: ViewAlias {
      - returns: `Make` instance to allow further modifications
      */
     @discardableResult public func match(centerY view: ViewAlias, offset: CGFloat = 0) -> Make<T> {
-        let viewAttributes = constraintAttributes()
+        let viewAttributes = constraintAttributes(for: view)
         element.snp.makeConstraints { (make) in
             make.centerY.equalTo(viewAttributes.centerY).offset(offset)
         }
