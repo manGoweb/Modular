@@ -39,7 +39,7 @@ extension NSLayoutConstraint {
 
 #if os(iOS) || os(tvOS)
     
-    extension NSLayoutAttribute {
+extension NSLayoutConstraint.Attribute {
         
         /// Convert attribute to a string
         public var asString: String {
