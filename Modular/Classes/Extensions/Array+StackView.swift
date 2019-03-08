@@ -33,7 +33,7 @@ import Foundation
             - alignment: `UIStackViewAlignment` (default `.leading`)
          - returns: `UIStackView`
          */
-        public func horizontalStackView(distribution: UIStackViewDistribution = .equalSpacing, alignment: UIStackViewAlignment = .leading) -> UIStackView {
+        public func horizontalStackView(distribution: UIStackView.Distribution = .equalSpacing, alignment: UIStackView.Alignment = .leading) -> UIStackView {
             let stackView = UIStackView(arrangedSubviews: element)
             stackView.axis = .horizontal
             stackView.distribution = distribution
@@ -49,7 +49,7 @@ import Foundation
             - alignment: `UIStackViewAlignment` (default `.leading`)
          - returns: `UIStackView`
          */
-        public func verticalStackView(distribution: UIStackViewDistribution = .equalSpacing, alignment: UIStackViewAlignment = .leading) -> UIStackView {
+        public func verticalStackView(distribution: UIStackView.Distribution = .equalSpacing, alignment: UIStackView.Alignment = .leading) -> UIStackView {
             let stackView = UIStackView(arrangedSubviews: element)
             stackView.axis = .vertical
             stackView.distribution = distribution

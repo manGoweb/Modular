@@ -17,7 +17,7 @@ class ViewController: NSViewController {
 
         let canvas1 = NSBox()
         canvas1.title = "Modular test!"
-        canvas1.place.on(view).with.topMargin().bottomMargin().and.sideMargins()
+        canvas1.place.on(view).with.top().bottom().and.sides()
         canvas1.debug.constraints()
     }
 
